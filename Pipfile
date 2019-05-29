@@ -13,6 +13,8 @@ pillow = "*"
 lxml = "*"
 requests = "*"
 redis = "*"
+scrapy-redis = "*"
+scrapy-redis-bloomfilter = "*"
 
 [requires]
 python_version = "3.6"

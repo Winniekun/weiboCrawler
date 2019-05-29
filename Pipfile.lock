@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "91e715a491401bfb1c88fc18bdda665262f8cb01321f10fb7136f9bee21b9118"
+            "sha256": "058f44133c3b07b3514e42efead6204e036b9bc995664b07839dbe2cae61c95f"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -319,6 +319,22 @@
             ],
             "index": "pypi",
             "version": "==1.6.0"
+        },
+        "scrapy-redis": {
+            "hashes": [
+                "sha256:1508dfb29141a7eb562e303a12d2733fd490dee866f7fabe3bee3e5c5bef6df8",
+                "sha256:b6991f2c0b2a72cd211296756acd03b9a7695fc437f5adbc3770d2e035979707"
+            ],
+            "index": "pypi",
+            "version": "==0.6.8"
+        },
+        "scrapy-redis-bloomfilter": {
+            "hashes": [
+                "sha256:4335416ab0d4f34486c733cac946d106123f3c3ab8b5faf8a0940f2788d93519",
+                "sha256:6671449295c70fd056adf82dd9032e7f60d314da3df9e071645e72a41f00d3c3"
+            ],
+            "index": "pypi",
+            "version": "==0.7.0"
         },
         "selenium": {
             "hashes": [
