@@ -1,0 +1,4 @@
+## 忽略文件
+.idea
+ghostdriver.log
+*__pycache__*
