@@ -48,6 +48,27 @@ LOCAL_MONGO_HOST = '127.0.0.1'
 LOCAL_MONGO_PORT = 27017
 DB_NAME = 'Sina'
 
+# Redis 配置
+LOCAL_REDIS_HOST = 'localhost'
+LOCAL_REDIS_PORT = 6379
+
+# Ensure use this Scheduler
+SCHEDULER = "scrapy_redis_bloomfilter.scheduler.Scheduler"
+
+# Ensure all spiders share same duplicates filter through redis
+DUPEFILTER_CLASS = "scrapy_redis_bloomfilter.dupefilter.RFPDupeFilter"
+
+# Redis URL
+REDIS_URL = 'redis://{}:{}'.format(LOCAL_REDIS_HOST, LOCAL_REDIS_PORT)
+
+# Number of Hash Functions to use, defaults to 6
+BLOOMFILTER_HASH_NUMBER = 6
+
+# Redis Memory Bit of Bloomfilter Usage, 30 means 2^30 = 128MB, defaults to 30
+BLOOMFILTER_BIT = 31
+
+# Persist
+SCHEDULER_PERSIST = True
 
 # IP
 DOWNLOAD_TIMEOUT = 10

@@ -12,6 +12,7 @@ pymongo = "*"
 pillow = "*"
 lxml = "*"
 requests = "*"
+redis = "*"
 
 [requires]
 python_version = "3.6"
