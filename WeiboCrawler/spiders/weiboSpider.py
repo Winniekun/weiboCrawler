@@ -42,9 +42,6 @@ class WeibospiderSpider(RedisSpider):
         """
         解析本页的数据
         """
-        """
-                解析本页的数据
-                """
         tree_node = etree.HTML(response.body)
         tweet_nodes = tree_node.xpath('//div[@class="c" and @id]')
         for tweet_node in tweet_nodes:
@@ -167,7 +164,7 @@ class WeibospiderSpider(RedisSpider):
             information_item["labels"] = labels[0].replace(u"\xa0", ",").replace(';', '').strip(',')
         request_meta = response.meta
         request_meta['item'] = information_item
-        yield Request(self.base_url + '/u/{}'.format(information_item['_id']),
+        yield Request(self.start_urls + '/u/{}'.format(information_item['_id']),
                       callback=self.parse_further_information,
                       meta=request_meta, dont_filter=True, priority=1)
 

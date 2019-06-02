@@ -17,11 +17,11 @@ for key in r.scan_iter("weiboSpider*"):
     print('删除成功')
 
 url_format = "https://weibo.cn/search/mblog?hideSearchFrame=&keyword={}&advancedfilter=1&starttime={}&endtime={}&sort=time&page=1"
-# 搜索的关键词，可以修改
-keyword = "健身"
-# 搜索的起始日期，可修改 微博的创建日期是2009-08-16
-date_start = datetime.datetime.strptime("2019-05-28", '%Y-%m-%d')
-# 搜索的结束日期，可修改
+# 搜索的关键词
+keyword = "癌症"
+# 搜索的起始日期 微博的创建日期是2009-08-16
+date_start = datetime.datetime.strptime("2019-05-10", '%Y-%m-%d')
+# 搜索的结束日期
 date_end = datetime.datetime.strptime("2019-05-29", '%Y-%m-%d')
 time_spread = datetime.timedelta(days=1)
 while date_start < date_end:

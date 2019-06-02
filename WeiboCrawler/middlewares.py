@@ -5,7 +5,7 @@
 # See documentation in:
 # https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 import random
-
+import requests
 import pymongo
 from WeiboCrawler.settings import LOCAL_MONGO_PORT, LOCAL_MONGO_HOST, DB_NAME
 
@@ -160,8 +160,10 @@ class IPProxyMiddleware(object):
 
     def fetch_proxy(self):
         # 链接代理接口
-        #格式:'ip:port'的格式，如'12.34.1.4:9090'
-        return None
+        #格式:'ip:port'的格式 如'12.34.1.4:9090'
+        url = 'http://localhost:5002/random'
+        proxy = requests.get(url).text
+        return proxy
 
     def process_request(self, request, spider):
         proxy_data = self.fetch_proxy()
